@@ -1,0 +1,90 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.heading {
+    font-size: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform:uppercase;
+    margin: 10px auto 15px 0px;
+}
+
+.form-container {
+    border: 2px solid rebeccapurple;
+    width: 80vw;
+    min-height: auto;
+    border-radius: 15px;
+}
+
+.form-container form {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.field-set {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 5px;
+}
+
+.field-set label {
+    width: 30%;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 5px;
+}
+
+.field-set input[type='text'], input[type='email'], input[type='password'] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(166, 128, 205);
+}
+
+.field-set input[type='text']:focus, input[type='email']:focus, input[type='password']:focus {
+    background-color: rgb(231, 220, 243);
+    cursor: auto;
+}
+
+.radio-label {
+    font-weight: normal !important;
+}
+
+.field-set input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+    color: rebeccapurple;
+    width: 1.1em;
+    height: 1em;
+    border: 0.14em solid rebeccapurple;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.56em;
+    height: 0.53em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: rebeccapurple;
+}
+
+.field-set input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+
